@@ -14,6 +14,25 @@
     max-height: 800px;
     padding: 30px 15px 0;
 
+    // Custom Scrollbar
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff8e6;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #a89c74;
+    border-radius: 4px;
+
+    &:hover {
+      background: #8d7b5a;
+    }
+  }
+  
+
     .message {
       margin: 0 10px 35px 0;
       background-color: $widget-bg;
@@ -86,6 +105,8 @@
   &:hover {
     background-color: darken($primary-color, 10%);
   }
+
+  
 }
 
 @keyframes pulse {
