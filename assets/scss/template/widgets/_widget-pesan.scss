@@ -87,3 +87,15 @@
     background-color: darken($primary-color, 10%);
   }
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.97);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
