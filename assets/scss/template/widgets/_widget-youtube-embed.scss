@@ -1,0 +1,35 @@
+.yt-section {
+  max-width: 800px;
+  margin: 100px auto;
+
+  .yt-box {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56%;
+    border: 20px solid #d97530;
+
+    > iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-top: 27px;
+      padding-bottom: 27px;
+      background: #d97530;
+    }
+  }
+
+  .frame-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .yt-window {
+    position: relative;
+  }
+}

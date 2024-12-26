@@ -1,0 +1,310 @@
+<style>
+        body {
+            background-image: url('../assets/images/bg.png');
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-color: #cdc5af;
+            color: #1e2657;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+        .hero-section {
+           
+        }
+
+        .logo {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dua kolom dengan lebar sama */
+            align-items: center; /* Sejajarkan gambar secara vertikal */
+            margin-bottom: 10px;
+        }
+
+        .left-logo {
+            justify-self: start; /* Foto pertama di kiri */
+            width: 200px;
+            height: auto;
+        }
+
+        .right-logo {
+            justify-self: end; /* Foto kedua di kanan */
+            width: 120px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .left-logo {
+                width: 160px; /* Ubah ukuran logo kiri untuk layar kecil */
+            }
+
+            .right-logo {
+                width: 86px; /* Ubah ukuran logo kanan untuk layar kecil */
+            }
+        }
+        .countdown-section {
+            text-align: left;
+            color: #1e2657;
+            padding: 30px;
+        }
+        .countdown-section h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #452d20;
+        }
+        .countdown-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: #452d20;
+        }
+        .countdown-section .label img {
+            display: block;
+            width: 160px;
+            height: auto;
+            margin-bottom: -6px;
+        }
+        .countdown-section .time {
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: start;
+            gap: 50px;
+        }
+        .countdown-section .time div {
+            text-align: center;
+        }
+        .countdown-section .time div span {
+            display: block;
+        }
+        .time-number {
+            font-size: 3rem;
+            color: #452d20;
+        }
+
+        @media (max-width: 768px) {
+            .time-number {
+                font-size: 2rem;
+        }
+        .countdown-section .time {
+            gap: 30px;
+        }
+        .send-hope-button {
+            font-size: 0.7rem !important;
+        }
+
+        .countdown-section h1 {
+            font-size: 1.8rem;
+        }
+    }
+        .time-label {
+            font-size: 1rem;
+            color: #d97530;
+            position: relative;
+            top: -10px;
+            text-align : left;
+        }
+        .footer {
+            background-color: #b8ab85;
+            color: #ffffff;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        .footer .divider {
+            
+            margin: 10px 0;
+        }
+
+        .social-media-icons {
+        margin-top: 10px;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+            color: #fff; /* Warna default ikon */
+            font-size: 20px; /* Ukuran ikon */
+            transition: color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-media-icons a:hover {
+            color: #d97530; /* Warna ikon saat hover */
+            transform: scale(1.2); /* Efek zoom saat hover */
+        }
+        .widget {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            max-width: 98%;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .widget-body {
+            flex: 1;
+            overflow-y: scroll;
+            max-height: 800px;
+            padding: 30px 15px 0 15px;
+        }
+        @media (max-width: 768px) {
+            .widget {max-height: 400px;}
+        }
+
+        #load-more {
+            font-size: 1rem;
+            color: #452d20;
+            font-weight: 600;
+            padding-bottom: 24px;
+            text-decoration: none;
+        }
+.modal-header {
+            background-color: #d97530;
+            color: #fff;
+            font-weight: 600;
+        }
+        .modal-body {
+            background-color: #fff8e6;
+            color: #1e2657;
+        }
+        .modal-footer {
+            background-color: #f7f2de;
+        }
+        .modal-footer .btn {
+            background-color: #d97530;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .modal-footer span {
+            font-size: 0.8rem;
+            color: #424242;
+                    }
+
+/* Custom Scrollbar */
+.widget-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.widget-body::-webkit-scrollbar-track {
+    background: #fff8e6;
+}
+
+.widget-body::-webkit-scrollbar-thumb {
+    background: #a89c74;
+    border-radius: 4px;
+}
+
+.widget-body::-webkit-scrollbar-thumb:hover {
+    background: #8d7b5a;
+}
+        .widget-body .message {
+            margin: 0 10px 35px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: 1px solid rgba(184,171,133,0.89);
+            box-shadow: 10px 10px 0px 4px rgba(184,171,133,0.2);
+            -webkit-box-shadow: 10px 10px 0px 4px rgba(184,171,133,0.2);
+            -moz-box-shadow: 10px 10px 0px 4px rgba(184,171,133,0.2));
+            padding: 15px;
+            position: relative;
+        }
+        .widget-body .message:before {
+    content: "\201C";
+    font-size: 8rem;
+    color: #d97530;
+    position: absolute;
+    top: -65px;
+    left: -20px;
+    font-weight: 600;
+}
+
+
+        .widget-body blockquote {
+    margin: 0;
+    padding: 0 0 0 20px;
+    color: #452d20;
+    font-size: 1rem;
+}
+        .widget-body p {
+    margin: 0px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d97530;
+    padding: 0 0 0 20px;
+    margin-top: 6px;
+}
+        .widget-footer {
+            padding: 15px;
+            background-color: transparent;
+            position: relative;
+        }
+
+.widget-footer:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .send-hope-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d97530;
+            padding: 10px 20px;
+            border-radius: 15px;
+            gap: 8px; 
+        }
+        .send-hope-text {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .send-hope-button {
+            background-color: #d97530;
+            width: 100%;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            gap: 10px;
+            animation: pulse 2s infinite; 
+        }
+        .send-hope-button:hover {
+            background-color: rgb(48, 48, 48);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.97);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+       
+    </style>

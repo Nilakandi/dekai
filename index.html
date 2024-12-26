@@ -1,0 +1,360 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menuju Jakarta 5 Abad</title>
+    <!-- Meta SEO -->
+    <meta name="description" content="Mari sambut Jakarta berusia 5 abad! Berikan pesan dan harapan Anda untuk Jakarta di halaman ini.">
+    <meta name="keywords" content="Jakarta 5 Abad, HUT Jakarta, Pesan untuk Jakarta, Jakarta 500 Tahun">
+    <meta name="author" content="Dinas Komunikasi, Informatika dan Statistik DKI Jakarta">
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Menuju Jakarta 5 Abad">
+    <meta property="og:description" content="Mari sambut Jakarta berusia 5 abad! Berikan pesan dan harapan Anda untuk Jakarta di halaman ini.">
+    <meta property="og:image" content="https://dekairev.netlify.app/assets/images/ogimage.jpg">
+    <meta property="og:url" content="https://jakarta.go.id/jakarta-5-abad">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menuju Jakarta 5 Abad">
+    <meta name="twitter:description" content="Mari sambut Jakarta berusia 5 abad! Berikan pesan dan harapan Anda untuk Jakarta di halaman ini.">
+    <meta name="twitter:image" content="https://dekairev.netlify.app/assets/images/ogimage.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet" >
+
+</head>
+<body>
+    <div class="container hero-section">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="countdown-section">
+                    <div class="logo">
+                        <img src="../assets/images/logo.png" alt="Logo" class="left-logo">
+                        <img src="../assets/images/logodki.png" alt="Logo dki" class="right-logo">
+                    </div>
+                    <h1>Bentang Harapan JakASA</h1>
+                    <p>Jakarta Jati Diri Indonesia<br>Megapolitan Dunia</p>
+                    <p>Jakarta akan menjelma menjadi Megapolitan Dunia di umurnya yang ke 5 Abad, <strong>Tuliskan harapanmu di kotak ASA</strong></p>
+                    <div class="label" style="font-weight: 800;font-size: 1.4rem;color: #d97530;">Hitung Mundur</div>
+                    <div class="time">
+                        <div>
+                            <span class="time-number" id="days">365</span>
+                            <span class="time-label">Hari</span>
+                        </div>
+                        <div>
+                            <span class="time-number" id="hours">24</span>
+                            <span class="time-label">Jam</span>
+                        </div>
+                        <div>
+                            <span class="time-number" id="minutes">60</span>
+                            <span class="time-label">Menit</span>
+                        </div>
+                        <div>
+                            <span class="time-number" id="seconds">60</span>
+                            <span class="time-label">Detik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="widget-pesan">
+                    
+                        <div class="widget-body" id="message-container" >
+                    
+                        </div>
+                        
+                            <button class="send-hope-button"><i class="fa-solid fa-pencil"></i>Masukan Harapan di Kotak ASA →</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sendHopeModal" tabindex="-1" aria-labelledby="sendHopeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendHopeModalLabel">Kirim Harapanmu untuk Jakarta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="hopeForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label" style="font-weight: 600;">Nama</label>
+                            <input type="text" class="form-control" id="name" maxlength="40" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label" style="font-weight: 600;">Usia</label>
+                            <input type="number" class="form-control" id="age" maxlength="3" placeholder="Usia Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="job" class="form-label" style="font-weight: 600;">Pekerjaan</label>
+                            <input type="text" class="form-control" id="job" maxlength="40" placeholder="Pekerjaan Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" style="font-weight: 600;">Pesan Untuk Jakarta</label>
+                            <textarea class="form-control" id="message" rows="4" maxlength="400" placeholder="Tulis pesan Anda untuk Jakarta" required></textarea>
+                            <div id="char-count" class="char-count">0/400 karakter</div>
+                        </div>
+                        <!-- reCAPTCHA Element -->
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn" form="hopeForm" id="submitButton">Kirim Pesan</button>
+                    <span>* Semua kiriman akan melalui proses moderasi. Dilarang mengandung SARA dan promosi tindakan ilegal.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container yt-section">
+            
+            <div class="yt-window">
+                <img src="../assets/images/ytframe.png" alt="Frame" class="frame-img">
+                <div class="yt-box">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ue07acmWGNY?si=lAfm-hu2sJcrxRKarel=0&controls=0&showinfo=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </div>
+ 
+    </div>
+
+    <br>
+    <footer class="footer" style="margin-top: auto;">
+        <div class="container">
+            <hr style="border: 2px solid #ffffff; margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p><strong><a href="https://jakarta.go.id" target="_blank" style="color: inherit; text-decoration: none;">JAKARTA.GO.ID</a></strong><br>
+    Jl. Medan Merdeka Selatan 8-9 Jakarta Pusat, Jakarta, Indonesia<br>
+    Telp: <a href="tel:+62213822255" style="color: inherit; text-decoration: none;">(+6221) 382 2255</a><br>
+    Faks: <a href="tel:+62213822255" style="color: inherit; text-decoration: none;">(+6221) 382 2255</a><br>
+    Surel: <a href="mailto:diskominfo@jakarta.go.id" style="color: inherit; text-decoration: none;">diskominfo@jakarta.go.id</a></p>
+                </div>
+                <div class="col-md-6 col-sm-12 text-md-end">
+                    <p>&copy; 2024 Dinas Komunikasi, Informatika dan Statistik Pemprov DKI Jakarta</p>
+                    <div class="social-media-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script> // Form validasi box harapan
+        document.querySelector(".send-hope-button").addEventListener("click", function() {
+            const modal = new bootstrap.Modal(document.getElementById("sendHopeModal"));
+            modal.show();
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const charCount = document.getElementById("char-count");
+            const messageInput = document.getElementById("message");
+            
+            messageInput.addEventListener("input", function() {
+                const currentLength = messageInput.value.length;
+                charCount.innerText = `${currentLength}/400 karakter`;
+            });
+        });
+
+         // Validasi input usia (number only dan limit 3 karakter)
+            document.getElementById("age").addEventListener("input", function () {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3);
+            });
+
+            // Validasi input nama (limit 50 karakter)
+            document.getElementById("name").addEventListener("input", function () {
+                this.value = this.value.slice(0, 50);
+            });
+
+            // Validasi input pekerjaan (limit 50 karakter)
+            document.getElementById("job").addEventListener("input", function () {
+                this.value = this.value.slice(0, 50);
+            });
+    </script>
+
+    <script> // Submit pesan dan capcha
+        document.getElementById("hopeForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validasi reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Silakan selesaikan reCAPTCHA sebelum mengirimkan pesan.");
+        return;
+    }
+
+    // Kirim data ke server jika reCAPTCHA valid
+    const formData = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        job: document.getElementById("job").value,
+        message: document.getElementById("message").value,
+        recaptcha: recaptchaResponse,
+    };
+
+    fetch("/submit-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+    })
+        .then(response => {
+            if (response.ok) {
+                alert("Pesan berhasil dikirim!");
+                document.getElementById("hopeForm").reset();
+                grecaptcha.reset(); // Reset reCAPTCHA
+            } else {
+                alert("Gagal mengirim pesan. Silakan coba lagi.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Terjadi kesalahan. Silakan coba lagi.");
+        });
+    });
+    </script>
+
+<script> //render pesan
+    document.addEventListener("DOMContentLoaded", function () {
+        const messages = [
+            { "text": "Saya berharap Jakarta menjadi kota yang lebih ramah lingkungan dan nyaman untuk ditinggali.", "author": "Rizky (32) - Senior Product Manager" },
+            { "text": "Harapan saya untuk Jakarta adalah sistem transportasi publik yang semakin canggih.", "author": "Andini (25) - Mahasiswa" },
+            { "text": "Jakarta seharusnya menjadi kota inklusif, di mana setiap warganya merasa dihargai.", "author": "Bayu (28) - Aktivis Sosial" },
+            { "text": "Saya ingin Jakarta menjadi kota yang lebih aman.", "author": "Dewi (30) - Guru" },
+            { "text": "Semoga Jakarta memiliki lebih banyak inisiatif untuk mendukung bisnis lokal dan UMKM.", "author": "Ari (35) - Pengusaha" },
+            { "text": "Harapan saya adalah Jakarta dapat memperbaiki tata kelola airnya.", "author": "Fajar (40) - Insinyur" },
+            { "text": "Saya ingin Jakarta lebih mengedepankan teknologi dalam pelayanan publik.", "author": "Laila (29) - Pengembang Perangkat Lunak" },
+            { "text": "Harapan saya adalah Jakarta menjadi kota seni dan budaya yang kaya.", "author": "Rendra (27) - Seniman" },
+            { "text": "Semoga Jakarta bisa menjadi kota yang lebih hijau.", "author": "Siska (31) - Arsitek" },
+            { "text": "Saya ingin Jakarta menjadi kota pendidikan yang unggul.", "author": "Putra (33) - Dosen" },
+            { "text": "Harapan saya untuk Jakarta adalah pengendalian polusi udara yang lebih baik.", "author": "Fitri (37) - Dokter" },
+            { "text": "Semoga Jakarta dapat menciptakan lebih banyak lapangan pekerjaan.", "author": "Iqbal (26) - Fresh Graduate" },
+            { "text": "Saya berharap Jakarta menjadi kota yang lebih ramah terhadap para lansia.", "author": "Siti (45) - Pensiunan" },
+            { "text": "Harapan saya adalah agar Jakarta memiliki lebih banyak inisiatif untuk mengurangi sampah plastik.", "author": "Johan (34) - Lingkungan Hidup" },
+            { "text": "Semoga Jakarta menjadi kota yang mengedepankan pelayanan kesehatan.", "author": "Yuni (36) - Perawat" },
+            { "text": "Saya ingin Jakarta menjadi kota yang lebih teratur dalam perencanaan tata kotanya.", "author": "Hendri (38) - Urban Planner" },
+            { "text": "Harapan saya adalah agar Jakarta memiliki sistem peringatan dini yang lebih baik.", "author": "Tari (29) - Relawan" },
+            { "text": "Saya berharap Jakarta dapat meningkatkan layanan transportasi sungainya.", "author": "Riko (39) - Pelaku Wisata" },
+            { "text": "Semoga Jakarta menjadi kota yang lebih tertib dengan pengendalian kendaraan bermotor.", "author": "Bima (28) - Pengamat Lalu Lintas" },
+            { "text": "Saya ingin Jakarta menjadi kota yang mendukung gaya hidup sehat.", "author": "Anisa (35) - Atlet" },
+            { "text": "Saya ingin Jakarta menjadi kota yang lebih teratur dalam perencanaan tata kotanya.", "author": "Hendri (38) - Urban Planner" },
+            { "text": "Harapan saya adalah agar Jakarta memiliki sistem peringatan dini yang lebih baik.", "author": "Tari (29) - Relawan" },
+            { "text": "Saya berharap Jakarta dapat meningkatkan layanan transportasi sungainya.", "author": "Riko (39) - Pelaku Wisata" },
+            { "text": "Semoga Jakarta menjadi kota yang lebih tertib dengan pengendalian kendaraan bermotor.", "author": "Bima (28) - Pengamat Lalu Lintas" },
+            { "text": "Saya ingin Jakarta menjadi kota yang mendukung gaya hidup sehat.", "author": "Anisa (35) - Atlet" },
+        ];
+
+        const itemsPerLoad = 10; // Jumlah pesan yang dimuat per klik
+        let currentIndex = 0; // Indeks pesan yang telah dimuat
+        let shuffledMessages = []; // Array untuk pesan yang telah diacak
+        const messageContainer = document.getElementById("message-container");
+
+        // Buat elemen tombol "Tampil lebih banyak"
+        const loadMoreDiv = document.createElement("div");
+        loadMoreDiv.style.textAlign = "center";
+        loadMoreDiv.innerHTML = `<a href="#" id="load-more"><i class="fa-solid fa-circle-plus"></i> Tampilkan lebih banyak (xxx pesan tersisa)</a>`;
+        const loadMoreButton = loadMoreDiv.querySelector("#load-more");
+
+        // Fungsi untuk mengacak array
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Fungsi untuk memperbarui teks tombol
+        function updateLoadMoreText() {
+            const remainingMessages = shuffledMessages.length - currentIndex;
+            loadMoreButton.innerHTML = `<i class="fa-solid fa-circle-plus"></i> Tampilkan lebih banyak (${remainingMessages} pesan tersisa)`;
+        }
+
+        // Fungsi untuk memuat pesan
+        function loadMessages() {
+            const nextIndex = currentIndex + itemsPerLoad;
+
+            // Slicing pesan berdasarkan indeks
+            const visibleMessages = shuffledMessages.slice(currentIndex, nextIndex);
+
+            visibleMessages.forEach(message => {
+                if (message.text && message.author) {
+                    const messageElement = document.createElement("div");
+                    messageElement.className = "message";
+                    messageElement.innerHTML = `
+                        <blockquote>${message.text}</blockquote>
+                        <p>${message.author}</p>
+                    `;
+                    messageContainer.appendChild(messageElement);
+                }
+            });
+
+            currentIndex = nextIndex;
+
+            if (currentIndex >= shuffledMessages.length) {
+                // Sembunyikan tombol jika semua pesan telah dimuat
+                loadMoreDiv.style.display = "none";
+            } else {
+                // Pastikan tombol selalu di bagian bawah
+                messageContainer.appendChild(loadMoreDiv);
+                updateLoadMoreText();
+            }
+        }
+
+        // Event listener untuk tombol "Tampil lebih banyak"
+        loadMoreButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah tautan default
+            loadMessages();
+        });
+
+        // Acak pesan sebelum render pertama
+        shuffledMessages = shuffle([...messages]);
+
+        // Muat pesan pertama kali
+        loadMessages();
+        updateLoadMoreText();
+    });
+</script>
+
+
+    <script>//countdown
+        function updateCountdown() {
+            const eventDate = new Date("June 22, 2027 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+    
+    
+</body>
+</html>

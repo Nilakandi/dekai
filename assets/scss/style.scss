@@ -1,0 +1,10 @@
+// Base imports
+@import 'base/variable';
+@import 'base/mixin';
+@import 'base/general';
+
+// Widget imports
+@import 'template/widgets/widget-countdown';
+@import 'template/widgets/widget-footer';
+@import 'template/widgets/widget-pesan';
+@import 'template/widgets/widget-youtube-embed';

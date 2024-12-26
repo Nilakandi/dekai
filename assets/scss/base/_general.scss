@@ -1,0 +1,21 @@
+// Global Styles
+body {
+    background: url('../assets/images/bg.png') top no-repeat;
+    background-size: cover;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $font-family;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  // Hero Section
+  .hero-section {
+    margin: auto;}

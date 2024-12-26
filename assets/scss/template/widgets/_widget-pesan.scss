@@ -1,0 +1,89 @@
+// Widget
+.widget-pesan {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  max-width: 98%;
+  margin: 0 auto;
+
+  .widget-body {
+    flex: 1;
+    overflow-y: scroll;
+    max-height: 800px;
+    padding: 30px 15px 0;
+
+    .message {
+      margin: 0 10px 35px 0;
+      background-color: $widget-bg;
+      border-radius: 10px;
+      border: 1px solid $widget-border;
+      box-shadow: 10px 10px 0px 4px $widget-shadow;
+      padding: 15px;
+      position: relative;
+
+      &:before {
+        content: "\201C";
+        font-size: 8rem;
+        color: $primary-color;
+        position: absolute;
+        top: -65px;
+        left: -20px;
+        font-weight: 600;
+      }
+
+      blockquote {
+        margin: 0;
+        padding: 0 0 0 20px;
+        color: $secondary-color;
+        font-size: 1rem;
+      }
+
+      p {
+        margin: 6px 0 0;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+
+  #load-more {
+    font-size: 1rem;
+    color: #452d20;
+    font-weight: 600;
+    padding-bottom: 24px;
+    text-decoration: none;
+}
+ 
+
+  @include respond-to(medium) {
+    & {
+      max-height: 400px;
+    }
+  }
+}
+
+// Buttons
+.send-hope-button {
+  background-color: $primary-color;
+  color: $footer-color;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: 10px;
+  animation: pulse 2s infinite;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

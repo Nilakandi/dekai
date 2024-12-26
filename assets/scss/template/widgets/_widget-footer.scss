@@ -1,0 +1,28 @@
+// Footer
+.footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  padding: 20px 0;
+  font-size: 0.9rem;
+
+  .divider {
+    margin: 10px 0;
+  }
+
+  .social-media-icons {
+    margin-top: 10px;
+
+    a {
+      margin: 0 10px;
+      color: $footer-color;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

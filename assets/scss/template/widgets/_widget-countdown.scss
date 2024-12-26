@@ -1,0 +1,96 @@
+// Countdown Section
+.countdown-section {
+  text-align: left;
+  color: $text-color;
+  padding: 30px;
+
+  .logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+  
+    .left-logo {
+      justify-self: start;
+      width: 200px;
+    }
+  
+    .right-logo {
+      justify-self: end;
+      width: 120px;
+    }
+  
+    @include respond-to(medium) {
+      .left-logo {
+        width: 160px;
+      }
+  
+      .right-logo {
+        width: 86px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: $secondary-color;
+  }
+
+  .label img {
+    display: block;
+    width: 160px;
+    margin-bottom: -6px;
+  }
+
+  .time {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+
+    div {
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .time-number {
+    font-size: 3rem;
+    color: $secondary-color;
+  }
+
+  .time-label {
+    font-size: 1rem;
+    color: $primary-color;
+    position: relative;
+    top: -10px;
+    text-align: left;
+  }
+
+  @include respond-to(medium) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .time {
+      gap: 30px;
+    }
+
+    .time-number {
+      font-size: 2rem;
+    }
+  }
+}
