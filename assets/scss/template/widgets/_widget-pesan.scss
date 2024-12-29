@@ -20,15 +20,15 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #fff8e6;
+    background: $primary-color;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #a89c74;
+    background: $third-color;
     border-radius: 4px;
 
     &:hover {
-      background: #8d7b5a;
+      background: $primary-color;
     }
   }
   
@@ -45,7 +45,7 @@
       &:before {
         content: "\201C";
         font-size: 8rem;
-        color: $primary-color;
+        color: $third-color;
         position: absolute;
         top: -65px;
         left: -20px;
@@ -55,7 +55,7 @@
       blockquote {
         margin: 0;
         padding: 0 0 0 20px;
-        color: $secondary-color;
+        color: $third-color;
         font-size: 1rem;
       }
 
@@ -64,14 +64,14 @@
         text-align: right;
         font-size: 1rem;
         font-weight: bold;
-        color: $primary-color;
+        color: $third-color;
       }
     }
   }
 
   #load-more {
     font-size: 1rem;
-    color: #452d20;
+    color: white;
     font-weight: 600;
     padding-bottom: 24px;
     text-decoration: none;
@@ -87,7 +87,7 @@
 
 // Buttons
 .send-hope-button {
-  background-color: $primary-color;
+  background-color: $third-color;
   color: $footer-color;
   font-size: 1rem;
   font-weight: bold;

@@ -35,15 +35,28 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 10px;
-    color: $secondary-color;
+    color: white;
   }
 
   p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    font-weight: 500;
-    color: $secondary-color;
+    font-weight: 600;
+    color: white;
+    
   }
+
+  .deskripsi {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+  }
+
+  .hitung-mundur {
+
+    background: linear-gradient(135deg, #64b5f6, #1e88e5);
+    padding: 20px;
+    border-radius: 20px;
 
   .label img {
     display: block;
@@ -69,16 +82,17 @@
 
   .time-number {
     font-size: 3rem;
-    color: $secondary-color;
+    color: white;
   }
 
   .time-label {
     font-size: 1rem;
-    color: $primary-color;
+    color: white;
     position: relative;
     top: -10px;
     text-align: left;
   }
+}
 
   @include respond-to(medium) {
     h1 {

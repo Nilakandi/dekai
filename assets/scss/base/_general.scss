@@ -1,6 +1,6 @@
 // Global Styles
 body {
-    background: url('../assets/images/bg.png') top no-repeat;
+    background-image: radial-gradient(circle farthest-corner at top right, #59c8ff 14%, #008bff 50%, #0058e7 100%) !important;
     background-size: cover;
     background-color: $background-color;
     color: $text-color;

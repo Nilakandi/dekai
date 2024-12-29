@@ -1,17 +1,17 @@
 .modal-header {
-    background-color: #d97530;
+    background-color: $third-color;
     color: #fff;
     font-weight: 600;
 }
 .modal-body {
-    background-color: #fff8e6;
+    background-color: $primary-color;
     color: #1e2657;
 }
 .modal-footer {
-    background-color: #f7f2de;
+    background-color: $primary-color;
 }
 .modal-footer .btn {
-    background-color: #d97530;
+    background-color: $third-color;
     color: #fff;
     width: 100%;
     padding: 10px;
