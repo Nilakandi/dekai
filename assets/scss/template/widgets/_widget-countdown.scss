@@ -92,7 +92,7 @@
     top: -10px;
     text-align: left;
   }
-}
+
 
   @include respond-to(medium) {
     h1 {
@@ -108,3 +108,47 @@
     }
   }
 }
+  
+  .hitung-mundur .rotating-image {
+    position: absolute;
+    top: 52%;
+    left: 45%; /* Pusatkan horizontal */
+    transform: translate(-50%, -50%); /* Koreksi posisi ke tengah */
+    width: 150px; /* Ukuran gambar */
+    height: 150px; /* Ukuran gambar */
+    opacity: 0.6; /* Transparansi untuk menyesuaikan elemen di bawahnya */
+    z-index: 0; /* Pastikan gambar berada di bawah teks */
+    animation: rotate 10s linear infinite; /* Animasi rotasi */
+
+    img {
+      width: 150px;
+      @include respond-to(medium) {
+        width: 100px;
+      }
+    }
+
+    @include respond-to(medium) {
+      top: 50%;
+      left: 85%;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  .hitung-mundur .time,
+  .hitung-mundur .label {
+    position: relative; /* Pastikan teks berada di atas gambar */
+    z-index: 1;
+  }
+  
+  /* Animasi untuk rotasi */
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+}
+
